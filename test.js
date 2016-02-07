@@ -17,11 +17,10 @@ const data = [
 ];
 
 function run(t, input, output) {
-    return postcss([ plugin({ data }) ]).process(input)
-        .then( result => {
-            t.same(result.css, output);
-            t.same(result.warnings().length, 0);
-        });
+    return postcss([ plugin({ data }) ]).process(input).then(result => {
+        t.same(result.css, output);
+        t.same(result.warnings().length, 0);
+    });
 }
 
 test('fills template', t => {
@@ -37,4 +36,16 @@ test('fills template', t => {
                  '    background-color: #ff6600\n' +
                  '}';
     return run(t, input, output);
+});
+
+test('fills template with real data', t => {
+    var input = '@banks-db-template {' +
+                '    .billing-form.is-%country%-%name% {\n' +
+                '        background-color: %color%\n' +
+                '    }\n' +
+                '}';
+    return postcss([ plugin ]).process(input).then(result => {
+        t.ok(result.root.nodes.length > 2);
+        t.same(result.warnings().length, 0);
+    });
 });
