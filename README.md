@@ -27,6 +27,27 @@
 ...
 ```
 
+## Best Practices
+
+*  Banks have different colors so you must use [postcss-contrast](https://github.com/stephenway/postcss-contrast) to be sure about form readability. Put it after `postcss-banks-db`.
+
+    ```css
+    @banks-db-template {
+        .billing-form.is-%country%-%name% {
+            background-color: %color%;
+            color: contrast(%color%);
+        }
+    }
+    ```
+
+*  Add long transition for form colors because quick changes scary users.
+
+    ```css
+    .billing-form.is-%country%-%name% {
+        transition: background .6s, color .6s;
+    }
+    ```
+
 ## Usage
 
 ```js
