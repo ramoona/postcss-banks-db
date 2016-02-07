@@ -3,7 +3,8 @@ var banksDB = require('banks-db');
 
 function replace(bank, str) {
     for (var i in bank) {
-        str = str.replace('%' + i + '%', bank[i]);
+        var regexp = new RegExp('%' + i + '%', 'g');
+        str = str.replace(regexp, bank[i]);
     }
     return str;
 }

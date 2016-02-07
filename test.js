@@ -49,3 +49,18 @@ test('fills template with real data', t => {
         t.same(result.warnings().length, 0);
     });
 });
+
+test('replace multiple strings', t => {
+    var input = '@banks-db-template {' +
+                '    .billing-form.is-%country%-%name% {\n' +
+                '        border-color: %color% white %color%\n' +
+                '    }\n' +
+                '}';
+    var output = '.billing-form.is-ru-alfabank {\n' +
+                 '    border-color: #F22F17 white #F22F17\n' +
+                 '}\n' +
+                 '.billing-form.is-be-ingbelgium {\n' +
+                 '    border-color: #ff6600 white #ff6600\n' +
+                 '}';
+    return run(t, input, output);
+});
