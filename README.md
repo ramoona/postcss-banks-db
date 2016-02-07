@@ -8,8 +8,8 @@
 
 ```css
 @banks-db-template {
-    .billing-form.is-COUNTRY-NAME {
-        background-color: COLOR;
+    .billing-form.is-%country%-%name% {
+        background-color: %color%;
     }
 }
 ```
