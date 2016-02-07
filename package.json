@@ -1,0 +1,38 @@
+{
+  "name": "postcss-banks-db",
+  "version": "0.0.0",
+  "description": "PostCSS plugin to insert CSS based on Banks DB data",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "banks-db",
+    "bankcard",
+    "bin",
+    "card",
+    "bank",
+    "color"
+  ],
+  "author": "Ramoona <lindarian12@gmail.com>",
+  "license": "MIT",
+  "repository": "ramoona/postcss-banks-db",
+  "bugs": {
+    "url": "https://github.com/ramoona/postcss-banks-db/issues"
+  },
+  "homepage": "https://github.com/ramoona/postcss-banks-db",
+  "dependencies": {
+    "postcss": "^5.0.14",
+    "banks-db": "^0.4.0"
+  },
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "eslint": "^1.10.3",
+    "eslint-config-postcss": "^1.0.0"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5"
+  }
+}
