@@ -1,8 +1,9 @@
 # PostCSS Banks DB [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin to insert CSS based on Banks DB data.
+[PostCSS] plugin to insert CSS based on [Banks DB] data.
 
 [PostCSS]: https://github.com/postcss/postcss
+[Banks DB]: https://github.com/ramoona/banks-db
 [ci-img]:  https://travis-ci.org/ramoona/postcss-banks-db.svg
 [ci]:      https://travis-ci.org/ramoona/postcss-banks-db
 
