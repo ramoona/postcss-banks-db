@@ -1,6 +1,6 @@
 {
   "name": "postcss-banks-db",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "PostCSS plugin to insert CSS based on Banks DB data",
   "keywords": [
     "postcss",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/ramoona/postcss-banks-db",
   "dependencies": {
     "postcss": "^5.0.14",
-    "banks-db": "^0.4.0"
+    "banks-db": "^0.6.0"
   },
   "devDependencies": {
     "ava": "^0.11.0",
