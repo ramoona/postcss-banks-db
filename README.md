@@ -9,7 +9,7 @@
 
 ```css
 @banks-db-template {
-    .billing-form.is-%country%-%name% {
+    .billing-form.is-%code% {
         background-color: %color%;
     }
 }
@@ -34,7 +34,7 @@
 
     ```css
     @banks-db-template {
-        .billing-form.is-%country%-%name% {
+        .billing-form.is-%code% {
             background-color: %color%;
             color: contrast(%color%);
         }
@@ -44,7 +44,7 @@
 *  Add long transition for form colors because quick changes scary users.
 
     ```css
-    .billing-form.is-%country%-%name% {
+    .billing-form.is-%code% {
         transition: background .6s, color .6s;
     }
     ```

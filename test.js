@@ -1,18 +1,19 @@
 import postcss from 'postcss';
 import test    from 'ava';
-
 import plugin from './';
 
 const data = [
     {
         name: 'alfabank',
         country: 'ru',
-        color: '#F22F17'
+        color: '#F22F17',
+        code: 'ru-alfabank'
     },
     {
         name: 'ingbelgium',
         country: 'be',
-        color: '#ff6600'
+        color: '#ff6600',
+        code: 'be-ingbelgium'
     }
 ];
 
@@ -25,7 +26,7 @@ function run(t, input, output) {
 
 test('fills template', t => {
     var input = '@banks-db-template {' +
-                '    .billing-form.is-%country%-%name% {\n' +
+                '    .billing-form.is-%code% {\n' +
                 '        background-color: %color%\n' +
                 '    }\n' +
                 '}';
@@ -40,7 +41,7 @@ test('fills template', t => {
 
 test('fills template with real data', t => {
     var input = '@banks-db-template {' +
-                '    .billing-form.is-%country%-%name% {\n' +
+                '    .billing-form.is-%code% {\n' +
                 '        background-color: %color%\n' +
                 '    }\n' +
                 '}';
@@ -52,7 +53,7 @@ test('fills template with real data', t => {
 
 test('replace multiple strings', t => {
     var input = '@banks-db-template {' +
-                '    .billing-form.is-%country%-%name% {\n' +
+                '    .billing-form.is-%code% {\n' +
                 '        border-color: %color% white %color%\n' +
                 '    }\n' +
                 '}';
