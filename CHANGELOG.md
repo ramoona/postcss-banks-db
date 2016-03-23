@@ -1,9 +1,15 @@
-# 0.3.0
-* Update Banks DB to 0.7.0
-* Use %code% instead of %country%-%name%
+# v0.5.0
+Updated Banks DB to 0.9.0
 
-# 0.2.0
-Update Banks DB to 0.6.0
+# v0.4.0
+Updated Banks DB to 0.8.0
 
-# 0.1.0
+# v0.3.0
+* Updated Banks DB to 0.7.0
+* Add %code% instead of %country%-%name%
+
+# v0.2.0
+Updated Banks DB to 0.6.0
+
+# v0.1.0
 Initial commit.
