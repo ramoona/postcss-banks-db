@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/ramoona/postcss-banks-db",
   "dependencies": {
-    "postcss": "^5.0.14",
-    "banks-db": "^0.9.0"
+    "postcss": "^5.0.19",
+    "banks-db": "^0.10.0"
   },
   "devDependencies": {
     "ava": "^0.11.0",
