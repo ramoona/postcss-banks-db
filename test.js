@@ -19,8 +19,8 @@ const data = [
 
 function run(t, input, output) {
     return postcss([ plugin({ data }) ]).process(input).then(result => {
-        t.same(result.css, output);
-        t.same(result.warnings().length, 0);
+        t.deepEqual(result.css, output);
+        t.deepEqual(result.warnings().length, 0);
     });
 }
 
@@ -46,8 +46,8 @@ test('fills template with real data', t => {
                 '    }\n' +
                 '}';
     return postcss([ plugin ]).process(input).then(result => {
-        t.ok(result.root.nodes.length > 2);
-        t.same(result.warnings().length, 0);
+        t.truthy(result.root.nodes.length > 2);
+        t.deepEqual(result.warnings().length, 0);
     });
 });
 

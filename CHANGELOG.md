@@ -1,3 +1,6 @@
+# v0.8.0
+Updated all dependencies
+
 # v0.7.0
 Updated Banks DB to 0.10.6 and PostCSS to 5.1.1
 
