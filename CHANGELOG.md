@@ -1,3 +1,6 @@
+# v0.9.0
+Upddated Banks DB to 0.10.9
+
 # v0.8.0
 Updated all dependencies
 
